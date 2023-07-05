@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="stylesp.css">
+</head>
+<body>
+    <div class="container">
+        <h6>Checkout</h6>
+        <span>x</span>
+        <h3 id="payment">Please enter your card details below</h3>
+        <form action>
+                       
+            <label for="country">Country
+                <select name="country" id="country">
+                    <option value="South Africa">South Africa</option>
+                    <option value="Mozambique">Mozambique</option>
+                    <option value="Zambia">Zambia</option>
+                </select>
+            </label>
+            <label for="Card holder" id="Cardholder">Cardholder Name
+                <input type="text" name="cardholder" id="cardholder" />
+            </label>
+            
+            <label for="cardno">Card Number 
+                <input type="text" name="cardno" id="cardno" maxlength="16" onkeypress="cardspace()" />
+            </label>
+            <div class="float">
+                <label for="validtill" id="valid">Valid till
+                    <input type="text" name="vaildtill" id="validtill" maxlength="7" onkeypress="addSlashes()" />
+                </label>
+                <label for=" cvv" id="cvvtext">CVV
+                    <input type="text" name="cvv" id="cvv" maxlength="3" />
+                </label>
+            </div>
+            <label for="checkbox">
+                <input type="checkbox" name="checkbox" id="checkbox" />
+                <p class="address" id="address">Payment Address is the same as the Delivery Address</p>
+            </label>
+            <button>Pay R350.00</button>
+        </form>
+    </div>
+  
+    <script src="form.js"></script>
+</body>
+</html>
